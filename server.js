@@ -20,6 +20,7 @@ app.get('/api/route', async (req, res, next) => {
       res.status(200).json(result);
     })
     .catch((reason) => {
+      console.log(`Error doing route: ${reason}`)
       res.status(500).json(reason);
     });
 });
